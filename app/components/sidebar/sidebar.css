@@ -1,0 +1,100 @@
+.sidebar {
+  width: 260px;
+  background-color: #0d1b3f;
+  color: #a9b4d8;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 25px;
+}
+
+.logo {
+  text-align: left;
+  margin-bottom: 40px;
+  padding-left: 10px;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #fff;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 11px;
+  color: #a9b4d8;
+}
+
+.menu-label {
+    font-size: 12px;
+    color: #5e6b91;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 5px;
+}
+
+.menu a {
+  color: #a9b4d8;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.menu a:hover {
+    background-color: #1a2c5a;
+    color: #fff;
+}
+
+.menu li.active a {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.user-profile {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+.avatar-icon {
+  color: #4a90e2;
+  flex-shrink: 0;
+}
+
+.user-info {
+    flex-grow: 1;
+}
+
+.user-info p {
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+}
+
+.user-info span {
+  font-size: 12px;
+  color: #a9b4d8;
+}
+
+.logout-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #5e6b91;
+}
