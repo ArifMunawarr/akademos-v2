@@ -105,7 +105,8 @@
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 20px;
+  gap: 15px; /* Reduced gap from 20px */
+  padding: 20px;
   flex-grow: 1;
 }
 
@@ -179,7 +180,7 @@
   background-color: rgba(60, 64, 67, 0.6);
   border: none;
   position: relative; /* Add relative positioning */
-  bottom: 44px; /* Move only this button up */
+  bottom: 70px; /* Move only this button up */
 }
 
 .icon-button:hover {
@@ -266,13 +267,17 @@
 .monitoring-mode-view {
   display: flex;
   flex-direction: column;
-  flex: 1; /* Stretch to fill available height like sidebar */
+  flex-grow: 1; /* Allow this container to grow */
+  min-height: 0; /* Prevents flexbox overflow issues */
 }
 
 .monitoring-grid {
+  flex-grow: 1; /* Makes the grid take up available space, pushing footer down */
+  overflow-y: auto; /* Adds scroll for overflow */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
+  padding-bottom: 20px; /* Add space between grid and footer */
 }
 
 .monitoring-tile {
@@ -325,7 +330,7 @@
 }
 
 .monitoring-footer {
-  margin-top: 20px;
+  flex-shrink: 0; /* Prevents footer from shrinking */
   width: 100%;
   background-color: #ffffff;
   border-radius: 16px;

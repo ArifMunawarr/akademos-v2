@@ -122,20 +122,6 @@ const LiveClass = () => {
 
   return (
     <div className="live-class-container">
-      <div className="class-header">
-        <button className="back-button">&larr; Back</button>
-        <h1>Live Class</h1>
-      </div>
-
-      <div className="class-tabs">
-        <a href="#" className="tab-item"><FiInfo /> Class Information</a>
-        <a href="#" className="tab-item"><FiUsers /> Student</a>
-        <a href="#" className="tab-item"><FiBookOpen /> Module</a>
-        <a href="#" className="tab-item"><FiClipboard /> Manage Assignment</a>
-        <a href="#" className="tab-item"><FiAward /> Manage Exams</a>
-        <a href="#" className="tab-item active"><FiPlayCircle /> Live Class</a>
-      </div>
-
       <div className="mode-selector">
         <button 
           className={`mode-button ${activeMode === 'video' ? 'active' : ''}`}
