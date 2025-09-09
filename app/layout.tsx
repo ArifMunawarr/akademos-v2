@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -16,6 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Load OvenLiveKit UMD so window.OvenLiveKit is available */}
+        <Script
+          src="https://cdn.jsdelivr.net/npm/ovenlivekit@1.4.0/dist/OvenLiveKit.min.js"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body className={inter.className}>
         <div className="app-container">
           <main className="main-content">{children}</main>

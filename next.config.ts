@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Ensure ESM/CJS packages are transpiled for compatibility
+  transpilePackages: ["ovenlivekit"],
+  trailingSlash: false,
 };
 
 export default nextConfig;

@@ -35,3 +35,11 @@ body {
   flex: 1;
   background-color: #f7f8fa;
 }
+
+/* Force visible text color on browser autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #171717 !important;
+}
