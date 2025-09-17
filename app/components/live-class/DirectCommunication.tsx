@@ -279,7 +279,7 @@ const DirectCommunication: React.FC<DirectCommunicationProps> = ({ students, onD
 function encodeWAV(buffers: Float32Array[], sampleRate: number): Blob {
   const buffer = mergeBuffers(buffers);
   const dataview = encode(buffer, sampleRate);
-  return new Blob([dataview], { type: 'audio/wav' });
+  return new Blob([dataview.buffer as ArrayBuffer], { type: 'audio/wav' });
 }
 
 function mergeBuffers(buffers: Float32Array[]): Float32Array {
