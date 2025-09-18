@@ -109,7 +109,7 @@ const DirectCommunication: React.FC<DirectCommunicationProps> = ({ students, onD
         return Promise.resolve({ success: false, studentName: student.name, reason: 'Invalid URL' });
       }
 
-      const UPLOAD_API = `http://${ip}:8888/audio/upload`;
+      const UPLOAD_API = `https://${ip}:8888/audio/upload`;
       console.log(`INFO: Mengirim ke ${student.name} di IP: ${ip}`);
       
       return fetch(UPLOAD_API, { method: 'POST', body: formData })
@@ -123,7 +123,7 @@ const DirectCommunication: React.FC<DirectCommunicationProps> = ({ students, onD
           const filePath = responseData.path;
           if (!filePath) throw new Error('Filepath tidak ditemukan di respons.');
 
-          const PLAY_API = `http://${ip}:8888/audio/play`;
+          const PLAY_API = `https://${ip}:8888/audio/play`;
           return fetch(PLAY_API, { 
             method: 'POST', 
             headers: { 'Content-Type': 'application/json' },

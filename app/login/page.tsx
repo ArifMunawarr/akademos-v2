@@ -117,7 +117,7 @@ export default function LoginPage() {
             </button>
           </form>
           
-          <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+          {/* <div className="mt-6 p-4 bg-gray-50 rounded-lg">
             <p className="text-center text-xs text-gray-600 font-medium">Demo Credentials</p>
             <div className="mt-2 flex justify-between text-xs">
               <div className="text-green-600">
@@ -127,7 +127,7 @@ export default function LoginPage() {
                 <span className="font-semibold">Student:</span> student / student123
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

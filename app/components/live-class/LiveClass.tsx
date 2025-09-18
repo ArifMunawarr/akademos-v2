@@ -1891,7 +1891,11 @@ export const VideoRoomView = ({ participants, onPinToggle, pinned, isStudent }: 
     reader.onload = (e) => {
       const imageDataUrl = e.target?.result as string;
       if (imageDataUrl) {
-        sendImageMessage(imageDataUrl);
+        uploadedBgUrlRef.current = imageDataUrl;
+        setBgAction('upload');
+        const p = createImageProc(imageDataUrl);
+        if (p) { applyProcessor(p); }
+        previewDirtyRef.current = true;
       }
     };
     reader.readAsDataURL(file);
@@ -2673,7 +2677,7 @@ const MonitoringModeView = () => {
           .map(p => ({
             name: pcAliasRef.current[p.ipaddres] || p.nama || p.ipaddres,
             ip: p.ipaddres,
-            image: `http://${p.ipaddres}:8888/`,
+            image: `https://${p.ipaddres}:8888/`,
             type: 'iframe',
           }));
         setMonitoringParticipants(formattedParticipants);
